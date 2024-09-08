@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Editor from "./components/Editor"
 import Previewer from "./components/Previewer"
 
@@ -50,19 +50,12 @@ And here. | Okay. | I think we get it.
 function App() {
 
   const [editorIsMaximize, setEditorIsMaximize] = useState<boolean>(false);
-  const [editorIsHidden, setEditorIsHidden] = useState<boolean>(false);
   const [previewIsMaximize, setPreviewIsMaximize] = useState<boolean>(false);
-  const [previewIsHidden, setPreviewIsHidden] = useState<boolean>(false);
 
   const [markDownText, setMarkDownText] = useState<string>(defaultMarkDown);
 
-  useEffect(() => {
-    setPreviewIsHidden(prev => !prev);
-  }, [editorIsMaximize])
-
-  useEffect(() => {
-    setEditorIsHidden(prev => !prev);
-  }, [previewIsMaximize])
+  const editorIsHidden = previewIsMaximize;
+  const previewIsHidden = editorIsMaximize;
 
   return (
     <div className="min-h-screen bg-backgroundColor py-4">
