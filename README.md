@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Markdown Previewer 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📝 A real-time markdown previewer built with React that lets you write Markdown on the left and instantly see the rendered output on the right.  
 
-Currently, two official plugins are available:
+## Features ✨  
+- ✍️ **Real-time Preview** - See rendered Markdown as you type  
+- 📋 **Syntax Highlighting** - Clean formatting for code blocks  
+- 🎨 **Customizable** - Adjustable editor and preview panes  
+- 📱 **Responsive Design** - Works on all devices  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo  
+👉 [https://markdown-previewer-5dit.onrender.com/](https://markdown-previewer-5dit.onrender.com/)  
 
-## Expanding the ESLint configuration
+## Installation  
+```bash
+# Clone repository
+git clone https://github.com/maker-dev/markdown-previewer.git
+cd markdown-previewer
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Install dependencies
+npm install
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Start development server
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies Used  
+- ⚛️ React with Hooks  
+- 📦 Remarkable (or Marked.js) for Markdown parsing  
+- 💅 Styled Components (or CSS Modules)  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Supported Markdown Features  
+- Headers (#, ##)  
+- Emphasis (*italic*, **bold**)  
+- Lists (ordered and unordered)  
+- Code blocks (`inline` and ```fenced```)  
+- Links and images  
+- Blockquotes  
+- Horizontal rules  
